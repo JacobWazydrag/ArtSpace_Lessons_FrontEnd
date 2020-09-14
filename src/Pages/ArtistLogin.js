@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import studentActions from '../redux/actions';
+import artistActions from '../redux/actions';
 
 const LoginPage = props => {
   // initializing dispatch
@@ -14,7 +14,7 @@ const LoginPage = props => {
   // controlled form functions
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(studentActions.loginStudentToDB(loginForm));
+    dispatch(artistActions.loginArtistToDB(loginForm));
     props.history.push('/');
   };
 
@@ -27,7 +27,7 @@ const LoginPage = props => {
   // Component code
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Student Login Page</h1>
+      <h1>Artist Login Page</h1>
       <input
         type="text"
         name="username"

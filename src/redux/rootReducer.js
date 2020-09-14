@@ -4,6 +4,10 @@ export default (state = {}, { type, payload }) => {
         return payload;
       case 'CLEAR_STUDENT':
         return {};
+      case 'SET_ARTIST':
+        return payload;
+      case 'CLEAR_ARTIST':
+        return {};
       default:
         return state;
     }
